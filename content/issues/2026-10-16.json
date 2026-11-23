@@ -7,39 +7,45 @@
     "设计协作",
     "UX 研究"
   ],
-  "focus": "拿一个小需求试行「先体验原型，再讨论方案」。请参会者独立完成任务并记录卡点，再由设计师解释取舍，最后更新团队约定。",
+  "focus": [
+    "下一次评审试试 Prototype First。请同事先用三分钟独立完成可运行原型里的任务，再听设计者解释方案。记录哪些步骤只有听完讲解才会操作，优先检查需要在产品里补上的反馈。"
+  ],
   "items": [
     {
       "title": "小组共学让 AI 实践容易复用",
       "publisher": "Figma",
       "url": "https://www.figma.com/blog/4-team-rituals-that-drive-ai-adoption/",
-      "change": "案例汇总了 Figma 的小组共学、Mercari 的跨职能学习和 Atlassian 的原型优先评审。",
-      "insight": "把新工具放进有反馈和分享的工作任务，团队更容易知道该用在哪一步。",
-      "action": "选一个真实设计问题做短周期共学，每次结束留下一个示例和适用条件。"
+      "paragraphs": [
+        "Figma 汇总了 Figma、Sephora、Mercari 与 Atlassian 的做法。Figma 试行了六周的小组学习，Mercari 让设计和工程相互补技能，Atlassian 则让团队先操作原型再听解释。共同点在于把 AI 实践写进了团队的协作安排。",
+        "可以连续四周做一场半小时实战分享，每周一人带一个设计任务，展示方法、失败的部分和最后的修正。每次留下一个别的同事可以复用的范例，下一周回头看看它是否节省了真实工作。"
+      ]
     },
     {
       "title": "实现提速以后，设计评审也要跟上",
       "publisher": "Designer Fund × Anthropic",
       "url": "https://designerfund.substack.com/p/ai-design-anthropic",
-      "change": "对 Anthropic 设计团队的采访展示了用可运行原型暴露歧义，以及用短评审应对更快的迭代。",
-      "insight": "原型容易做出来之后，团队需要更频繁讨论问题是否值得解决。",
-      "action": "用短评审替代一次长汇报，提前发布原型，会上集中讨论最难确定的一项取舍。"
+      "paragraphs": [
+        "Designer Fund 对 Anthropic 设计团队的采访展示了另一种节奏：一个点子很快可以变成可运行的原型，团队因此有机会反复评审和调整。实现变快，把注意力转移到了该花多少时间验证一个方向。",
+        "在正式 UI 评审前做一次 15 分钟原型评审。让产品、设计和工程先操作，再分别指出看不懂的地方、与预期不同的行为，以及最可能出错的状态。只挑真正影响方案的发现带入下一轮。"
+      ]
     },
     {
       "title": "用上下文库积累可复用知识",
       "publisher": "Nielsen Norman Group",
       "url": "https://www.nngroup.com/articles/context-libraries/",
-      "change": "NN/g 观察了熟练用户如何管理反复使用的背景、示例和指令。",
-      "insight": "团队可以把既有组件、设计规则与验收标准组织成容易维护的材料。",
-      "action": "为一个界面类型维护小型上下文库，写清组件、典型状态和验收要求。"
+      "paragraphs": [
+        "NN/g 观察熟练用户如何用上下文库维护项目知识。把全局规则、项目特例和原始材料一起交给 AI，容易出现规则串用，例如把上一个项目的视觉规范用到当前任务。",
+        "先为一个需求维护 PROJECT.md、RESEARCH.md、DESIGN_RULES.md 和 DECISIONS.md。按任务提供需要的材料，项目结束后把长期有效的组件约束和案例再收进团队知识库。"
+      ]
     },
     {
       "title": "让研究发现进入设计决策",
       "publisher": "Nielsen Norman Group 延伸阅读",
       "url": "https://www.nngroup.com/articles/research-journey-mapping/",
-      "change": "用户旅程研究提供了将访谈证据组织成团队共同理解的做法。",
-      "insight": "研究报告的价值可以通过它影响了哪项设计决策来追踪。",
-      "action": "每条重要发现同时记录证据、影响的决策和验证方式。"
+      "paragraphs": [
+        "团队读到完整的调研过程，也可能说不出下一步该改什么。可以用用户旅程中的观察来组织研究结论，将证据、风险和设计决定放在一起。",
+        "例如服务恢复后，用户不知道当前恢复的是哪个任务，可能出于误解而重复提交。可验证的设计决定是让恢复页保留任务名称与状态。每份研究结尾给出两三条这样能影响设计的结论。"
+      ]
     }
   ]
 }

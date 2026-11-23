@@ -1,7 +1,7 @@
 ---
 import { base } from '../lib/issues.mjs'
 import '../styles/site.css'
-const { title = '快爆 UI/UX 周报', description = '每周整理值得设计团队关注的 UI/UX 行业新进展。' } = Astro.props
+const { title = '快爆 UI/UX 周报', description = '每周追踪设计与产品实践。', section = '' } = Astro.props
 ---
 <!doctype html>
 <html lang="zh-CN">
@@ -10,19 +10,21 @@ const { title = '快爆 UI/UX 周报', description = '每周整理值得设计�
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
   <meta name="description" content={description} />
-  <meta name="theme-color" content="#f6f5ef" />
+  <meta name="theme-color" content="#ffffff" />
   <link rel="icon" href="data:," />
   <title>{title}</title>
 </head>
 <body>
   <a class="skip" href="#main">跳到正文</a>
   <header class="top">
-    <nav class="wrap" aria-label="主导航">
-      <a class="brand" href={base + '/'}><span class="mark" aria-hidden="true">✳</span> 快爆 UI/UX 周报</a>
-      <a class="nav-link" href={base + '/#archive'}>往期归档</a>
+    <nav class="nav frame" aria-label="主导航">
+      <a class="brand" href={base + '/'}>快爆 <span>UI/UX 周报</span></a>
+      <a class="nav-link" href={base + '/archive/'} aria-current={section === 'archive' ? 'page' : undefined}>往期归档</a>
     </nav>
   </header>
   <main id="main"><slot /></main>
-  <footer class="wrap footer"><span>快爆 UI/UX 周报</span><a href={base + '/#archive'}>浏览往期</a></footer>
+  <footer class="footer"><div class="frame">
+    <a href={base + '/'}>快爆 UI/UX 周报</a><a href={base + '/archive/'}>往期归档</a>
+  </div></footer>
 </body>
 </html>

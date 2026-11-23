@@ -18,14 +18,18 @@ for (const filename of files) {
     assert.match(issue.date, /^\d{4}-\d{2}-\d{2}$/)
     assert.equal(new Date(issue.date).toISOString().slice(0, 10), issue.date)
     assert.equal(filename, issue.date + '.json')
-    for (const field of ['title', 'summary', 'focus']) checkText(issue[field], field)
+    for (const field of ['title', 'summary']) checkText(issue[field], field)
     assert(Array.isArray(issue.tags) && issue.tags.length, 'Issue has no tags')
     for (const tag of issue.tags) checkText(tag, 'tag')
-    assert(Array.isArray(issue.items) && issue.items.length, 'Issue has no stories')
+    assert(Array.isArray(issue.focus) && issue.focus.length, 'Issue has no practice section')
+    for (const paragraph of issue.focus) checkText(paragraph, 'focus paragraph')
+    assert(Array.isArray(issue.items) && issue.items.length >= 3 && issue.items.length <= 5, 'Expected three to five stories')
     for (const item of issue.items) {
-      for (const field of ['title', 'publisher', 'url', 'change', 'insight', 'action']) {
+      for (const field of ['title', 'publisher', 'url']) {
         checkText(item[field], 'item.' + field)
       }
+      assert(Array.isArray(item.paragraphs) && item.paragraphs.length >= 2, 'Expected at least two story paragraphs')
+      for (const paragraph of item.paragraphs) checkText(paragraph, 'story paragraph')
       const url = new URL(item.url)
       const path = url.pathname.replace(/\/$/, '')
       assert(url.protocol === 'https:' && !url.username && !url.password, 'Invalid source URL')

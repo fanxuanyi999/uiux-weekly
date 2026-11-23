@@ -1,5 +1,6 @@
 ---
 import Shell from '../../layouts/Shell.astro'
+import Edition from '../../components/Edition.astro'
 import { base, issues, issueUrl, formatDate } from '../../lib/issues.mjs'
 export function getStaticPaths() {
   return issues.map((issue, index) => ({
@@ -10,35 +11,12 @@ export function getStaticPaths() {
 const { issue, newer, older } = Astro.props
 ---
 <Shell title={issue.title + ' · 快爆 UI/UX 周报'} description={issue.summary}>
-  <div class="wrap edition">
-    <a class="back" href={base + '/#archive'}>返回周报归档</a>
-    <header class="edition-head">
-      <p class="eyebrow"><time datetime={issue.date}>{formatDate(issue.date)}</time></p>
-      <h1>{issue.title}</h1>
-      <p class="intro">{issue.summary}</p>
-      <ul class="tags" aria-label="主题">{issue.tags.map(tag => <li>{tag}</li>)}</ul>
-    </header>
-    <div class="edition-grid">
-      <nav class="contents" aria-label="本期目录">
-        <h2>本期目录</h2>
-        <ul>{issue.items.map((item, index) => <li><a href={'#item-' + (index + 1)}>{item.title}</a></li>)}
-        <li><a href="#practice">本周可以试</a></li></ul>
-      </nav>
-      <div>
-        {issue.items.map((item, index) => <article class="story" id={'item-' + (index + 1)}>
-          <p class="eyebrow">{item.publisher}</p>
-          <h2>{item.title}</h2>
-          <dl><dt>行业变化</dt><dd>{item.change}</dd><dt>设计启发</dt><dd>{item.insight}</dd><dt>可落地动作</dt><dd>{item.action}</dd></dl>
-          <a class="source" href={item.url}>阅读原文 <span aria-hidden="true">↗</span></a>
-        </article>)}
-        <section class="practice" id="practice">
-          <h2>本周可以试</h2><p>{issue.focus}</p>
-        </section>
-        <nav class="adjacent" aria-label="相邻期次">
-          {newer && <a href={issueUrl(newer.date)}>更新一期 <span>{formatDate(newer.date)}</span></a>}
-          {older && <a href={issueUrl(older.date)}>更早一期 <span>{formatDate(older.date)}</span></a>}
-        </nav>
-      </div>
-    </div>
+  <div class="reading detail">
+    <Edition issue={issue} />
+    <nav class="adjacent" aria-label="周报导航">
+      {newer && <a href={issueUrl(newer.date)}>更新一期 <span>{formatDate(newer.date)}</span></a>}
+      {older && <a href={issueUrl(older.date)}>更早一期 <span>{formatDate(older.date)}</span></a>}
+      <a href={base + '/archive/'}>往期归档</a>
+    </nav>
   </div>
 </Shell>

@@ -1,0 +1,12 @@
+---
+interface Props {
+  item: { title: string; publisher: string; url: string; paragraphs: string[] }
+  heading: 'h2' | 'h3'
+}
+const { item, heading: Heading } = Astro.props
+---
+<section class="story">
+  <Heading>{item.title}</Heading>
+  {item.paragraphs.map(paragraph => <p>{paragraph}</p>)}
+  <p class="source"><a href={item.url}>{item.publisher} · 原文</a></p>
+</section>

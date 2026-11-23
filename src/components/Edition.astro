@@ -1,0 +1,52 @@
+---
+import { formatDate, issueUrl } from '../lib/issues.mjs'
+import Story from './Story.astro'
+
+interface StoryData {
+  title: string
+  publisher: string
+  url: string
+  paragraphs: string[]
+}
+
+interface Props {
+  issue: {
+    date: string
+    title: string
+    summary: string
+    focus: string[]
+    items: StoryData[]
+  }
+  feed?: boolean
+}
+
+const { issue, feed = false } = Astro.props
+const Heading = feed ? 'h2' : 'h1'
+const StoryHeading = feed ? 'h3' : 'h2'
+const length = issue.items.reduce(
+  (total, item) => total + item.paragraphs.join('').length,
+  issue.summary.length + issue.focus.join('').length,
+)
+const fold = feed && issue.items.length > 2 && length > 750
+const preview = fold ? issue.items.slice(0, 2) : issue.items
+const remaining = issue.items.slice(preview.length)
+const Continuation = fold ? 'details' : 'div'
+---
+<article class="edition">
+  <header class="article-header">
+    <time datetime={issue.date}>{formatDate(issue.date)}</time>
+    <Heading class="article-title">
+      {feed ? <a href={issueUrl(issue.date)}>{issue.title}</a> : issue.title}
+    </Heading>
+    <p class="lead">{issue.summary}</p>
+  </header>
+  {preview.map(item => <Story item={item} heading={StoryHeading} />)}
+  <Continuation class:list={{ 'article-more': fold }}>
+    {fold && <summary><span class="closed-label">继续阅读（另 {remaining.length} 条）</span><span class="open-label">收起后续内容</span></summary>}
+    {remaining.map(item => <Story item={item} heading={StoryHeading} />)}
+    <aside class="practice" aria-label="本周可以试">
+      <StoryHeading>本周可以试</StoryHeading>
+      {issue.focus.map(paragraph => <p>{paragraph}</p>)}
+    </aside>
+  </Continuation>
+</article>
