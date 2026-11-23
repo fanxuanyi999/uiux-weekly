@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-16",
+  "title": "把 AI 试验变成团队习惯",
+  "summary": "从小组共学、原型评审和上下文库入手，把个人摸索变成可重复的团队实践。",
+  "tags": [
+    "AI 工作流",
+    "设计协作",
+    "UX 研究"
+  ],
+  "focus": "拿一个小需求试行「先体验原型，再讨论方案」。请参会者独立完成任务并记录卡点，再由设计师解释取舍，最后更新团队约定。",
+  "items": [
+    {
+      "title": "小组共学让 AI 实践容易复用",
+      "publisher": "Figma",
+      "url": "https://www.figma.com/blog/4-team-rituals-that-drive-ai-adoption/",
+      "change": "案例汇总了 Figma 的小组共学、Mercari 的跨职能学习和 Atlassian 的原型优先评审。",
+      "insight": "把新工具放进有反馈和分享的工作任务，团队更容易知道该用在哪一步。",
+      "action": "选一个真实设计问题做短周期共学，每次结束留下一个示例和适用条件。"
+    },
+    {
+      "title": "实现提速以后，设计评审也要跟上",
+      "publisher": "Designer Fund × Anthropic",
+      "url": "https://designerfund.substack.com/p/ai-design-anthropic",
+      "change": "对 Anthropic 设计团队的采访展示了用可运行原型暴露歧义，以及用短评审应对更快的迭代。",
+      "insight": "原型容易做出来之后，团队需要更频繁讨论问题是否值得解决。",
+      "action": "用短评审替代一次长汇报，提前发布原型，会上集中讨论最难确定的一项取舍。"
+    },
+    {
+      "title": "用上下文库积累可复用知识",
+      "publisher": "Nielsen Norman Group",
+      "url": "https://www.nngroup.com/articles/context-libraries/",
+      "change": "NN/g 观察了熟练用户如何管理反复使用的背景、示例和指令。",
+      "insight": "团队可以把既有组件、设计规则与验收标准组织成容易维护的材料。",
+      "action": "为一个界面类型维护小型上下文库，写清组件、典型状态和验收要求。"
+    },
+    {
+      "title": "让研究发现进入设计决策",
+      "publisher": "Nielsen Norman Group 延伸阅读",
+      "url": "https://www.nngroup.com/articles/research-journey-mapping/",
+      "change": "用户旅程研究提供了将访谈证据组织成团队共同理解的做法。",
+      "insight": "研究报告的价值可以通过它影响了哪项设计决策来追踪。",
+      "action": "每条重要发现同时记录证据、影响的决策和验证方式。"
+    }
+  ]
+}

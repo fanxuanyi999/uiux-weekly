@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-23",
+  "title": "从 AI 模拟回到真实用户",
+  "summary": "看合成用户的适用边界、AI 评估中的真人偏好，以及怎样把研究往产品决策前移。",
+  "tags": [
+    "UX 研究",
+    "AI 评估",
+    "视觉设计"
+  ],
+  "focus": "挑一个真实的搜索或浏览任务，让 AI 帮团队列出研究假设，再请真实用户完成任务。比较两边发现，标出哪些只能由真实用户揭示。",
+  "items": [
+    {
+      "title": "合成用户能拓展假设，真人研究提供证据",
+      "publisher": "Nielsen Norman Group",
+      "url": "https://www.nngroup.com/articles/synthetic-users-vs-human-respondents/",
+      "change": "NN/g 比较合成与人类参与者的回答，讨论细节、差异与意外发现的损失。",
+      "insight": "模拟输出适合启发问题和检查材料，涉及用户需求和行为时仍需要独立证据。",
+      "action": "用 AI 预演访谈，随后让真人测试重点任务并记录模型未想到的情况。"
+    },
+    {
+      "title": "把用户偏好带回 AI 评估",
+      "publisher": "Microsoft Design",
+      "url": "https://microsoft.design/articles/putting-the-user-back-into-ai-evaluation/",
+      "change": "Copilot 研究团队将用户判断纳入对 AI 回答的评估。",
+      "insight": "答案是否有帮助，也取决于语气、任务背景和用户因此能做什么。",
+      "action": "对同一问题展示两种回答，记录用户选哪一种、理由及任务结果。"
+    },
+    {
+      "title": "提前研究可能影响路线图的问题",
+      "publisher": "UX Research Institute",
+      "url": "https://www.uxrinstitute.com/course/anticipatory-ux-research",
+      "change": "预见式研究主张在明确方案之前关注潜在需求与风险。",
+      "insight": "越早看清用户可能卡在哪里，越容易用小实验帮助团队确定优先级。",
+      "action": "在规划会上为一个待定方向列出高风险假设，并约定验证窗口。"
+    },
+    {
+      "title": "用 Stripe 案例拆解视觉原则",
+      "publisher": "Nielsen Norman Group",
+      "url": "https://www.nngroup.com/videos/5-design-principles-in-context-stripe/",
+      "change": "案例用一个站点讲解尺度、视觉层级、平衡、对比和格式塔原则。",
+      "insight": "有了共同的视觉语言，评审可以具体讨论注意力顺序和信息分组。",
+      "action": "选一张公开页面截图，独立标出前三个注意力落点，再对照讨论。"
+    }
+  ]
+}

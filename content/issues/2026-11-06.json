@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-06",
+  "title": "把体验规则带进 AI 开发流程",
+  "summary": "当 AI 参与软件交付，体验要求需要进入规格、组件和验收，同时照顾用户的真实任务复杂度。",
+  "tags": [
+    "AI 工作流",
+    "设计系统",
+    "交互设计"
+  ],
+  "focus": "给一个常见的流程补充一页体验验收说明，写清核心任务、异常状态、回退路径和使用的组件，再用它检查一次生成或实现结果。",
+  "items": [
+    {
+      "title": "AI 软件工厂中的 UX 角色",
+      "publisher": "Nielsen Norman Group",
+      "url": "https://www.nngroup.com/articles/ux-agentic-software-factories/",
+      "change": "文章讨论了 AI 软件工厂改变开发分工后，UX 如何参与规格和质量判断。",
+      "insight": "组件规则和体验要求越明确，团队越容易在实现过程中持续验收。",
+      "action": "把常见弹窗的优先级、关闭方式和错误状态写成可检查的要求。"
+    },
+    {
+      "title": "保留用户任务所需的复杂度",
+      "publisher": "Nielsen Norman Group",
+      "url": "https://www.nngroup.com/videos/complex-vs-complicated/",
+      "change": "NN/g 区分任务本身的复杂性和界面造成的额外复杂。",
+      "insight": "简化界面时应保留帮助用户理解和控制流程的状态信息。",
+      "action": "选一段多步骤流程，逐项说明状态信息是否帮助用户做出下一步决策。"
+    },
+    {
+      "title": "让标签页对应清晰的组织方式",
+      "publisher": "Nielsen Norman Group",
+      "url": "https://www.nngroup.com/videos/tabs-used-right/",
+      "change": "NN/g 讨论标签页何时适用以及组织标签内容时的常见问题。",
+      "insight": "用户应该能从标签的文字预期切过去会看到什么。",
+      "action": "在原型里做一次盲测，让用户先预测每个标签的内容，再尝试找到目标。"
+    },
+    {
+      "title": "设计对象扩展到人与 Agent 的协作",
+      "publisher": "Nielsen Norman Group",
+      "url": "https://www.nngroup.com/articles/ux-vs-experience-design/",
+      "change": "文章讨论体验设计如何覆盖人、AI 和系统之间的相互作用。",
+      "insight": "设计交付可以描述 Agent 的访问范围、失败状态以及控制权怎样交还。",
+      "action": "画出一次 Agent 辅助任务的交接流程，给失败和取消补上反馈。"
+    }
+  ]
+}

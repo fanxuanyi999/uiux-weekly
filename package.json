@@ -1,0 +1,14 @@
+{
+  "name": "uiux-weekly",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "validate": "node scripts/validate.mjs"
+  },
+  "dependencies": {
+    "astro": "^6.0.0"
+  }
+}

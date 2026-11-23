@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-30",
+  "title": "设计变快之后，质量怎么跟上",
+  "summary": "把注意力放回输出质量、审查成本和 AI 过程状态的表达。",
+  "tags": [
+    "AI 工作流",
+    "AI 评估",
+    "视觉设计"
+  ],
+  "focus": "选一项常见设计任务，记录生成、筛选、修改和验收的时间，同时比较通过率。用全程耗时和返工量决定是否复用这套工作流。",
+  "items": [
+    {
+      "title": "UX 从业者感受到提速，也关心质量",
+      "publisher": "Nielsen Norman Group",
+      "url": "https://www.nngroup.com/articles/ai-in-ux-survey-26/",
+      "change": "NN/g 的调查呈现了 UX 人员采用 AI 后对速度与工作质量的不同感受。",
+      "insight": "评估提效时可以同时追踪产出质量、核验与返工。",
+      "action": "为一个试点记录人工核验时间和最终通过率。"
+    },
+    {
+      "title": "模拟适合哪类研究任务",
+      "publisher": "Microsoft Design",
+      "url": "https://microsoft.design/articles/synthetic-users/",
+      "change": "多位研究者讨论了模拟用户、基于已有数据的合成数据和真人研究各自的证据边界。",
+      "insight": "可以按任务风险和已有数据条件判断模拟输出的可用范围。",
+      "action": "将任务分为探索、材料试跑和结论验证，给各类任务设定证据要求。"
+    },
+    {
+      "title": "AI 的审查负荷需要设计",
+      "publisher": "Microsoft Design",
+      "url": "https://microsoft.design/articles/faster-not-lighter-living-with-ai-brain-fry/",
+      "change": "文章描述生成提速后，持续筛选、判断和切换任务带来的认知负担。",
+      "insight": "工作流要为人留出足够的审查时间，并让高风险判断集中在清晰节点。",
+      "action": "限制一次评审的候选数量，记录必须由人确认的关键选择。"
+    },
+    {
+      "title": "为 AI 的运行状态设计视觉表达",
+      "publisher": "Google Design",
+      "url": "https://design.google/library/gemini-ai-visual-design",
+      "change": "Gemini 案例展示插画和动态视觉如何帮助传达产品状态。",
+      "insight": "稳定的视觉反馈可以让用户更容易判断系统正在做什么。",
+      "action": "为等待、完成和失败设计对应反馈，再测试用户能否区分这些状态。"
+    }
+  ]
+}
